@@ -1,1 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Power Drives Enterprises</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --navy: #0f2547;
+      --navy-mid: #1a3a6b;
+      --navy-light: #264d8e;
+      --accent: #e8520a;
+      --accent-soft: #f4795a;
+      --gold: #c9a84c;
+      --bg: #f7f5f0;
+      --bg-white: #ffffff;
+      --text: #1e1e1e;
+      --text-mid: #3d3d3d;
+      --text-light: #666666;
+      --border: #d9d4c7;
+      --section-bg: #f0ede6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo-block { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #fff;
+      letter-spacing: -1px;
+      flex-shrink: 0;
+    }
+    .logo-text { line-height: 1.2; }
+    .logo-text strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .logo-text span {
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .header-badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold);
+      font-weight: 600;
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── HERO BAND ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, #1e4d8c 100%);
+      color: #fff;
+      padding: 72px 40px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px; height: 2px;
+      background: var(--gold);
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 54px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent-soft);
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+    .hero-meta span strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    /* ── LAYOUT ── */
+    .layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 40px 80px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      position: sticky;
+      top: 82px;
+    }
+    .sidebar-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 2px; }
+    .toc-list a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 7px 10px;
+      border-radius: 6px;
+      transition: all 0.2s;
+      line-height: 1.4;
+    }
+    .toc-list a:hover {
+      background: var(--section-bg);
+      color: var(--navy-mid);
+    }
+    .toc-list a .num {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent);
+      min-width: 20px;
+      font-variant-numeric: tabular-nums;
+    }
+    .sidebar-contact {
+      margin-top: 32px;
+      padding: 20px;
+      background: var(--navy);
+      border-radius: 10px;
+      color: #fff;
+    }
+    .sidebar-contact h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: var(--gold);
+    }
+    .sidebar-contact p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .sidebar-contact a {
+      display: block;
+      font-size: 12px;
+      color: var(--accent-soft);
+      text-decoration: none;
+      margin-top: 4px;
+    }
+
+    /* ── CONTENT ── */
+    .content { min-width: 0; }
+
+    .intro-card {
+      background: var(--bg-white);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .intro-card p {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    .section {
+      margin-bottom: 52px;
+      animation: fadeUp 0.5s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--border);
+    }
+    .section-num {
+      flex-shrink: 0;
+      width: 38px; height: 38px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+      padding-top: 6px;
+    }
+
+    .subsection { margin-bottom: 24px; }
+    .subsection h3 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--navy-light);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    ul.policy-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+    ul.policy-list li {
+      font-size: 15px;
+      color: var(--text-mid);
+      padding: 8px 0 8px 28px;
+      border-bottom: 1px solid var(--section-bg);
+      position: relative;
+      line-height: 1.7;
+    }
+    ul.policy-list li::before {
+      content: '›';
+      position: absolute;
+      left: 8px;
+      color: var(--accent);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: var(--section-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .highlight-box p { margin-bottom: 0; font-size: 14px; color: var(--text-mid); }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .right-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--navy-mid);
+      border-radius: 8px;
+      padding: 18px 16px;
+    }
+    .right-card h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .right-card p {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    .contact-block {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: 12px;
+      padding: 36px 40px;
+      color: #fff;
+      margin-top: 12px;
+    }
+    .contact-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .contact-item label {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 6px;
+    }
+    .contact-item p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+    .contact-item a {
+      color: var(--accent-soft);
+      text-decoration: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px 40px;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      line-height: 1.8;
+    }
+    footer strong { color: rgba(255,255,255,0.8); font-weight: 500; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; padding: 36px 24px 60px; gap: 32px; }
+      .sidebar { position: static; display: none; }
+      .hero { padding: 48px 24px; }
+      .header-inner { padding: 16px 24px; }
+      .header-badge { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-block { padding: 28px 24px; }
+    }
+
+    /* Stagger animation for sections */
+    .section:nth-child(1)  { animation-delay: 0.05s; }
+    .section:nth-child(2)  { animation-delay: 0.1s; }
+    .section:nth-child(3)  { animation-delay: 0.15s; }
+    .section:nth-child(4)  { animation-delay: 0.2s; }
+    .section:nth-child(5)  { animation-delay: 0.25s; }
+    .section:nth-child(6)  { animation-delay: 0.3s; }
+    .section:nth-child(7)  { animation-delay: 0.35s; }
+    .section:nth-child(8)  { animation-delay: 0.4s; }
+    .section:nth-child(9)  { animation-delay: 0.45s; }
+    .section:nth-child(10) { animation-delay: 0.5s; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="https://powerdrives.in/" class="logo-block">
+      <div class="logo-icon">PD</div>
+      <div class="logo-text">
+        <strong>Power Drives Enterprises</strong>
+        <span>Automation &amp; Industrial Solutions</span>
+      </div>
+    </a>
+    <div class="header-badge">Legal Document</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Legal &amp; Compliance</div>
+    <h1>Privacy <em>Policy</em></h1>
+    <div class="hero-meta">
+      <span><strong>Effective Date:</strong> March 10, 2026</span>
+      <span><strong>Last Updated:</strong> March 10, 2026</span>
+      <span><strong>Jurisdiction:</strong> India (DPDP Act, 2023)</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-label">Table of Contents</div>
+    <ul class="toc-list">
+      <li><a href="#s1"><span class="num">01</span> Introduction</a></li>
+      <li><a href="#s2"><span class="num">02</span> Information We Collect</a></li>
+      <li><a href="#s3"><span class="num">03</span> How We Use Your Information</a></li>
+      <li><a href="#s4"><span class="num">04</span> Legal Basis for Processing</a></li>
+      <li><a href="#s5"><span class="num">05</span> Sharing of Information</a></li>
+      <li><a href="#s6"><span class="num">06</span> Cookies &amp; Tracking</a></li>
+      <li><a href="#s7"><span class="num">07</span> Data Retention</a></li>
+      <li><a href="#s8"><span class="num">08</span> Data Security</a></li>
+      <li><a href="#s9"><span class="num">09</span> Your Rights</a></li>
+      <li><a href="#s10"><span class="num">10</span> Third-Party Links</a></li>
+      <li><a href="#s11"><span class="num">11</span> Children's Privacy</a></li>
+      <li><a href="#s12"><span class="num">12</span> Policy Changes</a></li>
+      <li><a href="#s13"><span class="num">13</span> Contact Us</a></li>
+    </ul>
+
+    <div class="sidebar-contact">
+      <h4>Questions?</h4>
+      <p>Reach out to us for any privacy-related concerns.</p>
+      <a href="mailto:info@powerdrives.in">info@powerdrives.in</a>
+      <a href="tel:+919385036723">+91 9385 036723</a>
+    </div>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <div class="intro-card">
+      <p>Power Drives Enterprises (I) Pvt Ltd is committed to protecting the privacy and personal information of all visitors and users of <strong>www.powerdrives.in</strong>. This Privacy Policy explains how we collect, use, disclose, and safeguard your information in accordance with the <strong>Digital Personal Data Protection (DPDP) Act, 2023</strong> and other applicable Indian laws.</p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section" id="s1">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <h2 class="section-title">Introduction</h2>
+      </div>
+      <p>Power Drives Enterprises (I) Pvt Ltd ("we", "us", or "our") operates the website at <strong>www.powerdrives.in</strong>. We are a 28-year-old family-owned automation company headquartered in Chennai, India, specialising in industrial automation solutions, Special Purpose Machines (SPM), control panel building, and the supply of automation and process control products.</p>
+      <p>By using our Website, you agree to the collection and use of information as described in this Privacy Policy. If you do not agree with any part of this Policy, please refrain from using our Website.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="s2">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <h2 class="section-title">Information We Collect</h2>
+      </div>
+
+      <div class="subsection">
+        <h3>2.1 Information You Provide Directly</h3>
+        <p>When you interact with our Website or contact us, we may collect:</p>
+        <ul class="policy-list">
+          <li>Full name and job title / designation</li>
+          <li>Company name and industry</li>
+          <li>Email address and phone number</li>
+          <li>Postal or business address</li>
+          <li>Enquiry details, project requirements, and other information submitted via our contact form or email</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>2.2 Information Collected Automatically</h3>
+        <p>When you browse our Website, the following technical data is collected automatically:</p>
+        <ul class="policy-list">
+          <li>IP address and approximate geographic location</li>
+          <li>Browser type, version, and operating system</li>
+          <li>Pages visited, time spent on pages, and navigation paths</li>
+          <li>Referring URLs and search terms</li>
+          <li>Device type and screen resolution</li>
+          <li>Cookies and similar tracking technologies (see Section 6)</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>2.3 Business Interaction Data</h3>
+        <p>If you engage with us for product procurement or technical consultations, we may additionally collect company GST numbers, billing and shipping addresses, and purchase history relevant to our business relationship.</p>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="s3">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <h2 class="section-title">How We Use Your Information</h2>
+      </div>
+      <p>We use the information collected for the following purposes:</p>
+      <ul class="policy-list">
+        <li>To respond to enquiries and provide information about our products and services</li>
+        <li>To process quotations, orders, or project proposals</li>
+        <li>To send product updates, technical bulletins, or promotional communications (with your consent)</li>
+        <li>To improve our Website content, usability, and user experience</li>
+        <li>To analyse website traffic and understand how visitors use our Website</li>
+        <li>To comply with applicable legal and regulatory obligations</li>
+        <li>To detect, prevent, and address technical issues or fraudulent activity</li>
+        <li>To maintain records required for business operations and statutory compliance under Indian law</li>
+      </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section" id="s4">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <h2 class="section-title">Legal Basis for Processing</h2>
+      </div>
+      <p>In accordance with the <strong>Digital Personal Data Protection Act, 2023 (India)</strong>, we process your personal data on the following lawful bases:</p>
+      <ul class="policy-list">
+        <li><strong>Consent:</strong> Where you have provided explicit consent, such as submitting a contact form or subscribing to communications</li>
+        <li><strong>Contractual Necessity:</strong> Where processing is required to fulfil a contract or take pre-contractual steps</li>
+        <li><strong>Legitimate Interests:</strong> Where we have a legitimate business interest such as improving our Website and understanding customer needs, provided such interests are not overridden by your rights</li>
+        <li><strong>Legal Obligation:</strong> Where processing is necessary to comply with applicable laws and regulations</li>
+      </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section" id="s5">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <h2 class="section-title">Sharing of Your Information</h2>
+      </div>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following limited circumstances:</p>
+
+      <div class="subsection">
+        <h3>5.1 Authorised Service Providers</h3>
+        <p>Trusted third-party service providers assisting with website hosting, analytics, email communications, or IT support — contractually obligated to maintain confidentiality.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>5.2 Hardware &amp; Technology Partners</h3>
+        <p>Where your enquiry relates to products from our authorised partners (Schneider Electric, Fuji Electric, Wecon, Bonfiglioli, Mecvel, Bharat Bijlee, or Scientific Devices), we may share relevant enquiry details with the respective brand representative.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>5.3 Legal Requirements</h3>
+        <p>Where required by law, court order, or government authority, or where disclosure is necessary to protect our rights or your safety.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>5.4 Business Transfers</h3>
+        <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred to the successor entity under equivalent privacy protections.</p>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section" id="s6">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <h2 class="section-title">Cookies &amp; Tracking Technologies</h2>
+      </div>
+      <p>Our Website uses cookies and similar technologies to enhance your browsing experience. Cookies are small text files stored on your device that help us recognise your browser and remember preferences.</p>
+
+      <div class="subsection">
+        <h3>Types of Cookies We Use</h3>
+        <ul class="policy-list">
+          <li><strong>Essential Cookies:</strong> Required for core website functionality; cannot be disabled</li>
+          <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our Website (e.g. Google Analytics)</li>
+          <li><strong>Functional Cookies:</strong> Remember your preferences to personalise your experience</li>
+        </ul>
+      </div>
+
+      <div class="highlight-box">
+        <p>You may control or disable cookies through your browser settings. Please note that disabling certain cookies may affect the functionality of our Website.</p>
+      </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section" id="s7">
+      <div class="section-header">
+        <div class="section-num">7</div>
+        <h2 class="section-title">Data Retention</h2>
+      </div>
+      <p>We retain your personal information only for as long as necessary to fulfil the purposes described in this Policy or as required by law:</p>
+      <ul class="policy-list">
+        <li><strong>Enquiry and contact form data:</strong> Retained for up to 3 years from the date of last interaction</li>
+        <li><strong>Business transaction records:</strong> Retained for 7 years in accordance with Indian accounting and tax laws</li>
+        <li><strong>Website analytics data:</strong> Retained for up to 26 months in aggregated or anonymised form</li>
+      </ul>
+      <p>Once information is no longer required, it is securely deleted or anonymised.</p>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section" id="s8">
+      <div class="section-header">
+        <div class="section-num">8</div>
+        <h2 class="section-title">Data Security</h2>
+      </div>
+      <p>We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, disclosure, alteration, or destruction, including:</p>
+      <ul class="policy-list">
+        <li>Secure HTTPS encryption for all data transmitted via our Website</li>
+        <li>Access controls limiting who within our organisation can view personal data</li>
+        <li>Regular review of our data collection, storage, and processing practices</li>
+      </ul>
+      <div class="highlight-box">
+        <p>No method of transmission over the internet is completely secure. While we strive to protect your information, we cannot guarantee absolute security and you provide your information at your own risk.</p>
+      </div>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section" id="s9">
+      <div class="section-header">
+        <div class="section-num">9</div>
+        <h2 class="section-title">Your Rights</h2>
+      </div>
+      <p>Under the <strong>Digital Personal Data Protection Act, 2023</strong>, you have the following rights regarding your personal data:</p>
+
+      <div class="rights-grid">
+        <div class="right-card">
+          <h4>Right to Access</h4>
+          <p>Request a copy of the personal data we hold about you.</p>
+        </div>
+        <div class="right-card">
+          <h4>Right to Correction</h4>
+          <p>Request that inaccurate or incomplete data be corrected.</p>
+        </div>
+        <div class="right-card">
+          <h4>Right to Erasure</h4>
+          <p>Request deletion of your personal data, subject to legal retention requirements.</p>
+        </div>
+        <div class="right-card">
+          <h4>Withdraw Consent</h4>
+          <p>Withdraw consent at any time without affecting prior lawful processing.</p>
+        </div>
+        <div class="right-card">
+          <h4>Grievance Redressal</h4>
+          <p>Raise a grievance with our designated point of contact at any time.</p>
+        </div>
+      </div>
+
+      <p>To exercise any of these rights, please contact us using the details in Section 13. We will respond within <strong>30 days</strong>.</p>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section" id="s10">
+      <div class="section-header">
+        <div class="section-num">10</div>
+        <h2 class="section-title">Third-Party Links</h2>
+      </div>
+      <p>Our Website may contain links to external websites, including partner or manufacturer websites. We are not responsible for the privacy practices of such third-party websites. We encourage you to review the privacy policies of any external sites you visit.</p>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="section" id="s11">
+      <div class="section-header">
+        <div class="section-num">11</div>
+        <h2 class="section-title">Children's Privacy</h2>
+      </div>
+      <p>Our Website is not directed at individuals under the age of 18. We do not knowingly collect personal information from minors. If you believe a child has provided us with personal data, please contact us and we will take prompt steps to delete such information.</p>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section" id="s12">
+      <div class="section-header">
+        <div class="section-num">12</div>
+        <h2 class="section-title">Changes to This Privacy Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or Website features. The revised policy will be posted on this page with an updated effective date. We encourage you to review this page periodically. Continued use of our Website following any changes constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <!-- Section 13 -->
+    <div class="section" id="s13">
+      <div class="section-header">
+        <div class="section-num">13</div>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+      <p>For any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out to us:</p>
+
+      <div class="contact-block">
+        <h3>Power Drives Enterprises (I) Pvt Ltd</h3>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <label>Registered Address</label>
+            <p>Old No. 4/442, New No. 7/25,<br>Kundrathur Main Road, Kovur,<br>Chennai – 600 128, Tamil Nadu, India</p>
+          </div>
+          <div class="contact-item">
+            <label>Email</label>
+            <p>
+              <a href="mailto:info@powerdrives.in">info@powerdrives.in</a><br>
+              <a href="mailto:sales@powerdrives.in">sales@powerdrives.in</a>
+            </p>
+          </div>
+          <div class="contact-item">
+            <label>Phone</label>
+            <p><a href="tel:+919385036723">+91 9385 036723</a></p>
+          </div>
+          <div class="contact-item">
+            <label>Website</label>
+            <p><a href="https://powerdrives.in/" target="_blank">www.powerdrives.in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>Power Drives Enterprises (I) Pvt Ltd</strong> &nbsp;|&nbsp; Kovur, Chennai – 600 128, India</p>
+  <p style="margin-top:6px;">This Privacy Policy is governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in Chennai, Tamil Nadu.</p>
+  <p style="margin-top:6px;">© 2026 Power Drives Enterprises (I) Pvt Ltd. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
